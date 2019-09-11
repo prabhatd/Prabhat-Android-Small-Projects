@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
                 String reply=data.getStringExtra("reply");
                 receive.setVisibility(View.VISIBLE);
                 receive.setText(reply);
-
             }
         }
 
