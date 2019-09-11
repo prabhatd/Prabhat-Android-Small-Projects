@@ -83,6 +83,17 @@
       android:lineSpacingExtra="@dimen/line_spacing"
       android:padding="@dimen/padding_regular"
       android:text="@string/article_text" />
+
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Add Comment"
+         android:textAllCaps="false"
+         />
  </LinearLayout>
  </ScrollView>
+
+
+
+
 </RelativeLayout>
