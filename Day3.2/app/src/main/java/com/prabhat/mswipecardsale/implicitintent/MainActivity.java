@@ -13,7 +13,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     EditText editWebsite,editlocation,editShare;
-    Button  btnWebsite,btnLocation,btnShare;
+    Button  btnWebsite,btnLocation,btnShare,cameraButton;
     public static final String TAG=MainActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btnWebsite= findViewById(R.id.openWebsite);
         btnLocation=findViewById(R.id.findLoaction);
         btnShare=findViewById(R.id.shareButton);
-
+        cameraButton=findViewById(R.id.cameraButton);
         btnWebsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +71,14 @@ public class MainActivity extends AppCompatActivity {
                         .setText(text)
                         .setChooserTitle("Share This Text to Everyone")
                         .startChooser();
+            }
+        });
+
+        cameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                startActivity(intent);
             }
         });
     }
