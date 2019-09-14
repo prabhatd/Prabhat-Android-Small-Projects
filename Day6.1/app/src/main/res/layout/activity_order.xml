@@ -9,11 +9,146 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:layout_margin="20dp"
         android:id="@+id/txtOrder"
         android:textStyle="bold"
         android:textSize="24sp"
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtOrder"
+        android:layout_marginTop="14dp"
+        android:id="@+id/txtName"
+        android:layout_marginLeft="16dp"
+        android:text="Name"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtOrder"
+        android:layout_below="@+id/txtOrder"
+        android:layout_marginLeft="80dp"
+        android:inputType="textPersonName"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtName"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/txtAddress"
+        android:text="Address"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/editAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtOrder"
+        android:layout_below="@+id/editName"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
+        android:inputType="textPostalAddress"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAddress"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/txtPhone"
+        android:text="Phone"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtOrder"
+        android:layout_below="@+id/editAddress"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
+        android:inputType="phone"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPhone"
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/txtNote"
+        android:text="Note"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/editNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtOrder"
+        android:layout_below="@+id/editPhone"
+        android:layout_marginLeft="80dp"
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNote"
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/textRadio"
+        android:text="Choose a delivery method:"
+        android:textSize="20dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioSame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Same day messenger service"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioNext"
+            android:onClick="onRadioButtonClicked"
+            android:text="Next day ground delivery"
+            />
+
+        <RadioButton
+            android:id="@+id/radioPickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Pick up"/>
+    </RadioGroup>
+
+
 
 </RelativeLayout>
