@@ -1,7 +1,6 @@
 package com.prabhat.mswipecardsale.buttoncolorhandler;
 
 
-import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
@@ -9,10 +8,10 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -21,15 +20,15 @@ import java.util.Calendar;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener,TimePickerDialog.OnTimeSetListener {
+public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
 
 
-   /* public DatePickerFragment() {
+  /*  public TimePickerFragment() {
         // Required empty public constructor
-    }
-*/
+    }*/
 
-   /* @Override
+/*
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         TextView textView = new TextView(getActivity());
@@ -40,26 +39,15 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        final Calendar c= Calendar.getInstance();
-        int year=c.get(Calendar.YEAR);
-        int month=c.get(Calendar.MONTH);
-        int day=c.get(Calendar.DAY_OF_MONTH);
-        return new DatePickerDialog(getActivity(),this,year,month,day);
-    }
-
-    @Override
-    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-        DialogImplementActivity activity= (DialogImplementActivity) getActivity();
-        activity.processDatePickerResult(year,month,dayOfMonth);
+        final Calendar calendar=Calendar.getInstance();
+        int hour= calendar.get(Calendar.HOUR_OF_DAY);
+        int minutes=calendar.get(Calendar.MINUTE);
+        return new TimePickerDialog(getActivity(),this,hour,minutes,DateFormat.is24HourFormat(getActivity()));
     }
 
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        final Calendar calendar=Calendar.getInstance();
-        int hour= calendar.get(Calendar.HOUR_OF_DAY);
-        int minutes=calendar.get(Calendar.MINUTE);
-
         DialogImplementActivity activity= (DialogImplementActivity) getActivity();
-        activity.processTimePickerResult(hour,minutes);
+        activity.processTimePickerResult(hourOfDay,minute);
     }
 }

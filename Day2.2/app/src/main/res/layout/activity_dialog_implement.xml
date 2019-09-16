@@ -29,4 +29,16 @@
         android:text="Date Picker"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker"
+        android:layout_margin="16dp"
+        android:onClick="datePicker2"
+        android:id="@+id/datePicker2"
+        android:text="Time Picker"
+        />
+
 </android.support.constraint.ConstraintLayout>

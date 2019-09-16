@@ -1,6 +1,7 @@
 package com.prabhat.mswipecardsale.buttoncolorhandler;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -57,5 +58,19 @@ public class DialogImplementActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Date: " + dateMessage,
                 Toast.LENGTH_SHORT).show();
+    }
+
+    public void datePicker2(View v){
+        DialogFragment dialogFragment=new TimePickerFragment();
+        dialogFragment.show(getSupportFragmentManager(),"timePicker");
+    }
+
+    public void processTimePickerResult(int hour,int minutes){
+        String hours=Integer.toString(hour);
+        String minute=Integer.toString(minutes);
+
+        String timeMessage=(hours+":"+minute);
+
+        Toast.makeText(this,"Hour"+timeMessage,Toast.LENGTH_LONG).show();
     }
 }
