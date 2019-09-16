@@ -162,5 +162,36 @@
     </RadioGroup>
 
 
+   <!-- <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/editText_main"
+        android:imeOptions="actionSend"
+        android:inputType="phone"
+        android:hint="Phone number Please"
+        />-->
+<!--
+    <ImageButton
+        android:onClick="send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_send_key"
+        android:layout_marginBottom="2dp"
+        />-->
 
+    <EditText
+        android:id="@+id/editText_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:inputType="phone"
+        android:imeOptions="actionSend"
+        android:hint="Phone number Please" />
 </RelativeLayout>
