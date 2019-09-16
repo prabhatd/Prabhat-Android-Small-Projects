@@ -192,6 +192,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:inputType="phone"
+        android:layout_marginTop="10dp"
         android:imeOptions="actionSend"
         android:hint="Phone number Please" />
 </RelativeLayout>

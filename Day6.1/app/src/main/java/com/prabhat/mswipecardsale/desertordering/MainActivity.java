@@ -50,12 +50,34 @@ public class MainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+/*
         int id = item.getItemId();
+*/
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+     /*   //noinspection SimplifiableIfStatement
+        if (id == R.id.action_contact) {
             return true;
-        }
+        }*/
+
+     switch (item.getItemId()){
+         case R.id.action_order:
+            Intent intent = new Intent(MainActivity.this,OrderActivity.class);
+            startActivity(intent);
+                 return true;
+
+         case R.id.action_favorites:
+             displayToast("You clicked The favourite button");
+             return true;
+
+         case R.id.action_status:
+             displayToast("You want to Know the Statu of Application");
+                return true;
+         case R.id.action_contact:
+             displayToast("You clicked Contact Access Button");
+             return true;
+
+             default:
+     }
 
         return super.onOptionsItemSelected(item);
     }
