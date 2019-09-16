@@ -85,6 +85,7 @@
       android:text="@string/article_text" />
 
      <Button
+         android:onClick="next"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="Add Comment"
