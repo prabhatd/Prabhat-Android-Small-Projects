@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DrawableStylesAndTheme</string>
+    <string name="minus_button_description">Minus Button</string>
+
+    <string name="plus_button_description">Plus Button</string>
+</resources>
