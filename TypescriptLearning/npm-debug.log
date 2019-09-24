@@ -1,0 +1,172 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'typescript' ]
+2 info using npm@3.10.8
+3 info using node@v6.8.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData typescript
+8 silly fetchNamedPackageData typescript
+9 silly mapToRegistry name typescript
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'typescript',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'typescript',
+12 silly mapToRegistry   name: 'typescript',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/typescript
+14 verbose request uri https://registry.npmjs.org/typescript
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 5:02:29 PM
+17 verbose request id dd73515975a7da90
+18 verbose etag W/"9836a983b74885eb9c0e5d9a76842c6f"
+19 verbose lastModified Sun, 22 Sep 2019 06:14:59 GMT
+20 http request GET https://registry.npmjs.org/typescript
+21 http 200 https://registry.npmjs.org/typescript
+22 verbose headers { date: 'Tue, 24 Sep 2019 11:32:29 GMT',
+22 verbose headers   'content-type': 'application/json',
+22 verbose headers   'transfer-encoding': 'chunked',
+22 verbose headers   connection: 'keep-alive',
+22 verbose headers   'set-cookie': [ '__cfduid=d9883578c75cc8a01088daa6445d7d5d51569324749; expires=Wed, 23-Sep-20 11:32:29 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+22 verbose headers   'cf-cache-status': 'HIT',
+22 verbose headers   'cache-control': 'max-age=300',
+22 verbose headers   'cf-ray': '51b470271d1edf43-BOM',
+22 verbose headers   age: '4110',
+22 verbose headers   etag: 'W/"dcbe0198e3e6153128a21546f10f0b2c"',
+22 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+22 verbose headers   'last-modified': 'Tue, 24 Sep 2019 06:17:09 GMT',
+22 verbose headers   vary: 'accept-encoding, accept',
+22 verbose headers   'x-amz-meta-rev': '1736-a5a1dac046e31acf4a1a7a2af5964c04',
+22 verbose headers   server: 'cloudflare',
+22 verbose headers   'content-encoding': 'gzip' }
+23 silly get cb [ 200,
+23 silly get   { date: 'Tue, 24 Sep 2019 11:32:29 GMT',
+23 silly get     'content-type': 'application/json',
+23 silly get     'transfer-encoding': 'chunked',
+23 silly get     connection: 'keep-alive',
+23 silly get     'set-cookie': [ '__cfduid=d9883578c75cc8a01088daa6445d7d5d51569324749; expires=Wed, 23-Sep-20 11:32:29 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+23 silly get     'cf-cache-status': 'HIT',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     'cf-ray': '51b470271d1edf43-BOM',
+23 silly get     age: '4110',
+23 silly get     etag: 'W/"dcbe0198e3e6153128a21546f10f0b2c"',
+23 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+23 silly get     'last-modified': 'Tue, 24 Sep 2019 06:17:09 GMT',
+23 silly get     vary: 'accept-encoding, accept',
+23 silly get     'x-amz-meta-rev': '1736-a5a1dac046e31acf4a1a7a2af5964c04',
+23 silly get     server: 'cloudflare',
+23 silly get     'content-encoding': 'gzip' } ]
+24 verbose get saving typescript to /home/prabhatd/.npm/registry.npmjs.org/typescript/.cache.json
+25 verbose correctMkdir /home/prabhatd/.npm correctMkdir not in flight; initializing
+26 silly install normalizeTree
+27 silly loadCurrentTree Finishing
+28 silly loadIdealTree Starting
+29 silly install loadIdealTree
+30 silly cloneCurrentTree Starting
+31 silly install cloneCurrentTreeToIdealTree
+32 silly cloneCurrentTree Finishing
+33 silly loadShrinkwrap Starting
+34 silly install loadShrinkwrap
+35 silly loadShrinkwrap Finishing
+36 silly loadAllDepsIntoIdealTree Starting
+37 silly install loadAllDepsIntoIdealTree
+38 silly resolveWithNewModule typescript@3.6.3 checking installable status
+39 silly cache add args [ 'typescript', null ]
+40 verbose cache add spec typescript
+41 silly cache add parsed spec Result {
+41 silly cache add   raw: 'typescript',
+41 silly cache add   scope: null,
+41 silly cache add   escapedName: 'typescript',
+41 silly cache add   name: 'typescript',
+41 silly cache add   rawSpec: '',
+41 silly cache add   spec: 'latest',
+41 silly cache add   type: 'tag' }
+42 silly addNamed typescript@latest
+43 verbose addNamed "latest" is being treated as a dist-tag for typescript
+44 info addNameTag [ 'typescript', 'latest' ]
+45 silly mapToRegistry name typescript
+46 silly mapToRegistry using default registry
+47 silly mapToRegistry registry https://registry.npmjs.org/
+48 silly mapToRegistry data Result {
+48 silly mapToRegistry   raw: 'typescript',
+48 silly mapToRegistry   scope: null,
+48 silly mapToRegistry   escapedName: 'typescript',
+48 silly mapToRegistry   name: 'typescript',
+48 silly mapToRegistry   rawSpec: '',
+48 silly mapToRegistry   spec: 'latest',
+48 silly mapToRegistry   type: 'tag' }
+49 silly mapToRegistry uri https://registry.npmjs.org/typescript
+50 verbose addNameTag registry:https://registry.npmjs.org/typescript not in flight; fetching
+51 verbose get https://registry.npmjs.org/typescript not expired, no request
+52 silly addNameTag next cb for typescript with tag latest
+53 silly addNamed typescript@3.6.3
+54 verbose addNamed "3.6.3" is a plain semver version for typescript
+55 silly mapToRegistry name typescript
+56 silly mapToRegistry using default registry
+57 silly mapToRegistry registry https://registry.npmjs.org/
+58 silly mapToRegistry data Result {
+58 silly mapToRegistry   raw: 'typescript',
+58 silly mapToRegistry   scope: null,
+58 silly mapToRegistry   escapedName: 'typescript',
+58 silly mapToRegistry   name: 'typescript',
+58 silly mapToRegistry   rawSpec: '',
+58 silly mapToRegistry   spec: 'latest',
+58 silly mapToRegistry   type: 'tag' }
+59 silly mapToRegistry uri https://registry.npmjs.org/typescript
+60 verbose addRemoteTarball https://registry.npmjs.org/typescript/-/typescript-3.6.3.tgz not in flight; adding
+61 verbose addRemoteTarball [ 'https://registry.npmjs.org/typescript/-/typescript-3.6.3.tgz',
+61 verbose addRemoteTarball   'fea942fabb20f7e1ca7164ff626f1a9f3f70b4da' ]
+62 info retry fetch attempt 1 at 5:02:30 PM
+63 info attempt registry request try #1 at 5:02:30 PM
+64 http fetch GET https://registry.npmjs.org/typescript/-/typescript-3.6.3.tgz
+65 http fetch 200 https://registry.npmjs.org/typescript/-/typescript-3.6.3.tgz
+66 silly fetchAndShaCheck shasum fea942fabb20f7e1ca7164ff626f1a9f3f70b4da
+67 verbose addTmpTarball /tmp/npm-2727-e6719eb8/registry.npmjs.org/typescript/-/typescript-3.6.3.tgz not in flight; adding
+68 verbose addTmpTarball already have metadata; skipping unpack for typescript@3.6.3
+69 verbose correctMkdir /home/prabhatd/.npm correctMkdir not in flight; initializing
+70 silly cache afterAdd typescript@3.6.3
+71 verbose afterAdd /home/prabhatd/.npm/typescript/3.6.3/package/package.json not in flight; writing
+72 verbose correctMkdir /home/prabhatd/.npm correctMkdir not in flight; initializing
+73 verbose afterAdd /home/prabhatd/.npm/typescript/3.6.3/package/package.json written
+74 silly loadAllDepsIntoIdealTree Finishing
+75 silly loadIdealTree Finishing
+76 silly currentTree lib
+76 silly currentTree `-- typescript@3.5.3
+77 silly idealTree lib
+77 silly idealTree `-- typescript@3.6.3
+78 silly generateActionsToTake Starting
+79 silly install generateActionsToTake
+80 warn checkPermissions Missing write access to /usr/local/lib/node_modules/typescript
+81 silly rollbackFailedOptional Starting
+82 silly rollbackFailedOptional Finishing
+83 silly runTopLevelLifecycles Finishing
+84 silly install printInstalled
+85 verbose stack Error: EACCES: permission denied, access '/usr/local/lib/node_modules/typescript'
+85 verbose stack     at Error (native)
+86 verbose cwd /home/prabhatd/Desktop/Prabhat Android Learning/TypescriptLearning
+87 error Linux 4.15.0-64-generic
+88 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "typescript"
+89 error node v6.8.1
+90 error npm  v3.10.8
+91 error path /usr/local/lib/node_modules/typescript
+92 error code EACCES
+93 error errno -13
+94 error syscall access
+95 error Error: EACCES: permission denied, access '/usr/local/lib/node_modules/typescript'
+95 error     at Error (native)
+95 error  { Error: EACCES: permission denied, access '/usr/local/lib/node_modules/typescript'
+95 error     at Error (native)
+95 error   errno: -13,
+95 error   code: 'EACCES',
+95 error   syscall: 'access',
+95 error   path: '/usr/local/lib/node_modules/typescript' }
+96 error Please try running this command again as root/Administrator.
+97 verbose exit [ -13, true ]
