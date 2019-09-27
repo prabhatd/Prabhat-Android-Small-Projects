@@ -20,6 +20,7 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
@@ -40,16 +41,29 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Sport> mSportsData;
     private SportsAdapter mAdapter;
 
+    int swipeDirs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //for grid Layout manager
+        int gridColumnCount=getResources().getInteger(R.integer.grid_column_count);
+
+
+        if(gridColumnCount>1){
+            swipeDirs=0;
+        }else{
+            swipeDirs=ItemTouchHelper.LEFT| ItemTouchHelper.RIGHT;
+        }
         // Initialize the RecyclerView.
         mRecyclerView = findViewById(R.id.recyclerView);
 
         // Set the Layout Manager.
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //For Grrid layout manager
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this,gridColumnCount));
 
         // Initialize the ArrayList that will contain the data.
         mSportsData = new ArrayList<>();
@@ -60,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Get the data.
         initializeData();
+
 
 
      /*   ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT) {
@@ -83,14 +98,45 @@ public class MainActivity extends AppCompatActivity {
 
         });*/
 
-     ItemTouchHelper helper= new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT|ItemTouchHelper.UP|ItemTouchHelper.DOWN,ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT) {
-         @Override
-         public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+//     ItemTouchHelper helper= new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT|ItemTouchHelper.UP|ItemTouchHelper.DOWN,ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT) {
+//         @Override
+//         public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+//
+///*
+//             Implement drag and drop in Android Application
+//*/
+//
+//             int from =viewHolder.getAdapterPosition();
+//             int to=target.getAdapterPosition();
+//
+//             Collections.swap(mSportsData,from,to);
+//
+//             mAdapter.notifyItemMoved(from,to);
+//             return true;
+//         }
+//
+//         @Override
+//         public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+//
+///*
+//             Implement swipe to dismiss inside Recycler View/Card View
+//*/
+//
+//             mSportsData.remove(viewHolder.getAdapterPosition());
+//
+//             mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+//         }
+//     });
+//
+//     helper.attachToRecyclerView(mRecyclerView);
 
-/*
-             Implement drag and drop in Android Application
-*/
-
+        ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT|ItemTouchHelper.UP|ItemTouchHelper.DOWN,swipeDirs) {
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                ///*
+//             Implement drag and drop in Android Application
+//*/
+//
              int from =viewHolder.getAdapterPosition();
              int to=target.getAdapterPosition();
 
@@ -98,11 +144,10 @@ public class MainActivity extends AppCompatActivity {
 
              mAdapter.notifyItemMoved(from,to);
              return true;
-         }
+            }
 
-         @Override
-         public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
 /*
              Implement swipe to dismiss inside Recycler View/Card View
 */
@@ -110,10 +155,8 @@ public class MainActivity extends AppCompatActivity {
              mSportsData.remove(viewHolder.getAdapterPosition());
 
              mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
-         }
-     });
-
-     helper.attachToRecyclerView(mRecyclerView);
+            }
+        });
     }
 
     /**

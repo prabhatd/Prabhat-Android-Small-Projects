@@ -33,7 +33,7 @@
         android:textColor="?android:textColorSecondary"
         android:text="@string/news_placeholder"
         android:padding="16dp"
-        style="@style/TextAppearance.AppCompat.Subhead" />
+        style="@style/SportsDetailText" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         android:text="@string/sportsdetails_info"
         android:layout_below="@+id/newsTitleDetails"
         android:padding="16dp"
-        style="@style/TextAppearance.AppCompat.Subhead" />
+        style="@style/SportsDetailText" />
 
 </RelativeLayout>
 </ScrollView>
