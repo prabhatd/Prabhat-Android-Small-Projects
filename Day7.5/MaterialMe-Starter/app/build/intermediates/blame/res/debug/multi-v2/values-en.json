@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/prabhatd/Desktop/Prabhat Android Learning/Day7.5/MaterialMe-Starter/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en/values-en.xml",
+            "map": [
+                {
+                    "source": "/home/prabhatd/Desktop/Prabhat Android Learning/Day7.5/MaterialMe-Starter/app/src/main/res/values-en/strings.xml",
+                    "from": {
+                        "startLines": "23,37,9,2,4,5,7,3",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "2242,2782,1853,55,157,207,278,105",
+                        "endLines": "35,49,21,2,4,5,7,3",
+                        "endColumns": "19,19,19,49,49,69,1573,51",
+                        "endOffsets": "2776,3372,2236,100,202,272,1847,152"
+                    },
+                    "to": {
+                        "startLines": "2,15,28,41,42,43,44,45",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,594,1189,1577,1627,1677,1747,3321",
+                        "endLines": "14,27,40,41,42,43,44,45",
+                        "endColumns": "19,19,19,49,49,69,1573,51",
+                        "endOffsets": "589,1184,1572,1622,1672,1742,3316,3368"
+                    }
+                }
+            ]
+        }
+    ]
+}
