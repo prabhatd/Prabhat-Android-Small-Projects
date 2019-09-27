@@ -4,4 +4,4 @@ function greeter(person){
 
 let names="Prabhat";
 
-document.body.textContent=greeter(names);
+document.body().textContent=greeter(names);
