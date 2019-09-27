@@ -1,0 +1,151 @@
+       
+
+
+Cordova run Mswipe Sdk
+
+
+1--Cordova run adnroid:
+
+
+It will give error cannot find ANDROID_HOME and JAVA_HOME error:
+
+
+export ANDROID_HOME=/home/prabhatd/Android1/Sdk
+
+PATH=$PATH:$ANDROID_HOME/tools
+
+
+PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+
+
+2- cordova requirements:
+
+Java JDK: installed 1.8.0
+Android SDK: installed true
+Android target: installed android-28,android-27,android-26,android-25,android-24,android-23,android-22,android-21
+Gradle: installed /usr/share/gradle/bin/gradle
+
+
+3- cordova run android
+
+4- ERROR:
+
+Execution failed for task ':app:transformClassesWithMultidexlistForDebug'.
+> java.io.IOException: Can't write [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/multi-dex/debug/componentClasses.jar] (Can't read [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/transforms/desugar/debug/6.jar(;;;;;;**.class)] (Duplicate zip entry [6.jar:android/support/annotation/IntegerRes.class]))
+
+
+5- cordova plugin add cordova-plugin-enable-multidex
+
+6- cordova plugin add cordova-plugin-mswipesdk
+
+7- cordova run android
+
+8- ERROR:
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:transformClassesWithMultidexlistForDebug'.
+> java.io.IOException: Can't write [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/multi-dex/debug/componentClasses.jar] (Can't read [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/transforms/desugar/debug/6.jar(;;;;;;**.class)] (Duplicate zip entry [6.jar:android/support/annotation/IntegerRes.class]))
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+* Get more help at https://help.gradle.org
+
+
+9- cordova build android
+
+10 - ERROR:
+
+Using "requireCordovaModule" to load non-cordova module "fs" is not supported. Instead, add this module to your dependencies and use regular "require" to load it.
+
+11- cordova run android
+
+
+12- ERROR:
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:transformClassesWithMultidexlistForDebug'.
+> java.io.IOException: Can't write [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/multi-dex/debug/componentClasses.jar] (Can't read [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/transforms/desugar/debug/6.jar(;;;;;;**.class)] (Duplicate zip entry [6.jar:android/support/annotation/IntegerRes.class]))
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1s
+38 actionable tasks: 1 executed, 37 up-to-date
+/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/gradlew: Command failed with exit code 1 Error output:
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:transformClassesWithMultidexlistForDebug'.
+> java.io.IOException: Can't write [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/multi-dex/debug/componentClasses.jar] (Can't read [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/transforms/desugar/debug/6.jar(;;;;;;**.class)] (Duplicate zip entry [6.jar:android/support/annotation/IntegerRes.class]))
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1s
+
+13- npm clean
+
+14- npm rebuild 
+
+15- cordova run android
+
+16- Execution failed for task ':app:transformClassesWithMultidexlistForDebug'.
+> java.io.IOException: Can't write [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/multi-dex/debug/componentClasses.jar] (Can't read [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/transforms/desugar/debug/6.jar(;;;;;;**.class)] (Duplicate zip entry [6.jar:android/support/annotation/IntegerRes.class]))
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1s
+38 actionable tasks: 1 executed, 37 up-to-date
+/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/gradlew: Command failed with exit code 1 Error output:
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:transformClassesWithMultidexlistForDebug'.
+> java.io.IOException: Can't write [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/multi-dex/debug/componentClasses.jar] (Can't read [/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/platforms/android/app/build/intermediates/transforms/desugar/debug/6.jar(;;;;;;**.class)] (Duplicate zip entry [6.jar:android/support/annotation/IntegerRes.class]))
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1s
+
+
+17- cordova platform rm android
+
+18 - cordova platform add android
+
+19- Failed to install 'cordova-plugin-enable-multidex': CordovaError: Using "requireCordovaModule" to load non-cordova module "fs" is not supported. Instead, add this module to your dependencies and use regular "require" to load it.
+    at Context.requireCordovaModule (/usr/local/lib/node_modules/cordova/node_modules/cordova-lib/src/hooks/Context.js:57:15)
+    at module.exports (/home/prabhatd/Desktop/Prabhat Android Learning/MswipeSDKCordovaDemo/plugins/cordova-plugin-enable-multidex/scripts/android/editManifest.js:2:22)
+    at runScriptViaModuleLoader (/usr/local/lib/node_modules/cordova/node_modules/cordova-lib/src/hooks/HooksRunner.js:181:32)
+    at runScript (/usr/local/lib/node_modules/cordova/node_modules/cordova-lib/src/hooks/HooksRunner.js:157:16)
+    at /usr/local/lib/node_modules/cordova/node_modules/cordova-lib/src/hooks/HooksRunner.js:125:20
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+Using "requireCordovaModule" to load non-cordova module "fs" is not supported. Instead, add this module to your dependencies and use regular "require" to load it.
+
+20- cordova plugin
+
+21- cordova plugin rm cordova-plugin-enable-multidex
+
+22- cordova plugin add cordova-plugin-enable-multidex
+
+23- cordova plugin
+
+24- cordova run android
+
+
